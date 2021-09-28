@@ -1,0 +1,397 @@
+/* ============================= TYPOGRAPHY ======================
+=> Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+=> Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+=> Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+=> Letter spacing
+-0.5px
+0.75px
+============================== TYPOGRAPHY ===================== */
+
+/* ============================= WHITESPACE ======================
+
+=> Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 20 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+=============================== WHITESPACE ====================== */
+
+/*===================== GOOGLE FONTS ==============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+html {
+    /*  10px / 16px = 0.625 = 62.5%
+       Percentage of user's browser font-size setting
+    */
+
+    font-size: 62.5%;
+}
+
+/*=========================== CSS VARIABLES ==================*/
+:root {
+    --header-height: 4.8rem;
+
+    /*================ COLORS =================================*/
+
+    /* hsl Color Mode */
+    --first-color: hsl(190, 68%, 24%);
+    --first-color-alt: hsl(190, 68%, 16%);
+    --title-color: hsl(190, 66%, 20%);
+    --text-color: hsl(190, 24%, 38%);
+    --text-color-light: hsl(190, 8%, 60%);
+    --input-color: hsl(190, 20%, 94%);
+    --body-color: hsl(190, 100%, 99%);
+    --white-color: #f8f9fa;
+    --scroll-bar-color: hsl(190, 12%, 92%);
+    --scroll-thumb-color: hsl(190, 12%, 78%);
+
+    /*================ FONT FAMILY =================================*/
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Inter', sans-serif;
+
+    /*================ FONT SIZE =================================*/
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.4rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.6rem;
+    --normal-font-size: 1.5rem;
+    --small-font-size: 1.3rem;
+    --smallest-font-size: 1.2rem;
+
+    /*================ FONT WEIGHT =================================*/
+    --medium-font: 500;
+    --semi-bold-font: 600;
+    --bold-font: 700;
+
+    /*================ MARGIN BOTTOMS =================================*/
+    --mb-0-25: 0.4rem;
+    --mb-0-5: 0.8rem;
+    --mb-0-75: 1.2rem;
+    --mb-1: 1.6rem;
+    --mb-1-25: 2rem;
+    --mb-1-5: 2.4rem;
+    --mb-2: 3.2rem;
+    --mb-2-5: 4rem;
+
+    /*=============================== z index ===================================*/
+    --z-max: 100;
+    --z-tooltip: 10;
+}
+
+/*================ WIDESCREEN =================================*/
+
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 6.4rem;
+        --h1-font-size: 3.6rem;
+        --h2-font-size: 2.8rem;
+        --h3-font-size: 2rem;
+        --normal-font-size: 1.6rem;
+        --small-font-size: 1.4rem;
+        --smallest-font-size: 1.3rem;
+    }
+}
+
+/*================ BASE =================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--semi-bold-font);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input {
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+input {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.main {
+    overflow-x: hidden;
+}
+
+/*============================== UTILITY CLASSES ===========================*/
+
+.section {
+    padding: 7.2rem 0 4rem;
+}
+
+.section--title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+
+.container {
+    max-width: 968px;
+    margin: 0 var(--mb-1);
+}
+
+.grid {
+    display: grid;
+    grid-gap: 2.4rem;
+}
+
+/*===================================== HEADER =================================*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-max);
+    background-color: transparent;
+}
+
+/*===================================== NAVBAR =================================*/
+
+.nav {
+    height: var(--header-height);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav--logo,
+.nav--toggle {
+    color: var(--white-color);
+}
+
+.nav--logo {
+    font-weight: var(--semi-bold-font);
+}
+
+.nav--toggle {
+    font-size: 1.92rem;
+    cursor: pointer;
+}
+
+.nav--menu {
+    position: relative;
+}
+
+/*================================ MOBILE ================================*/
+
+@media screen and (max-width: 768px) {
+    .nav--menu {
+        position: fixed;
+        background-color: var(--body-color);
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        box-shadow: -2px 0 5px hsla(190, 66%, 20%, 0.17);
+        padding: 4.8rem;
+        transition: 0.4s;
+    }
+}
+
+.nav--list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+
+.nav--link {
+    color: var(--text-color-light);
+    font-weight: var(--semi-bold-font);
+    text-transform: uppercase;
+}
+
+.nav--link:hover {
+    color: var(--text-color);
+}
+
+.nav--close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.6rem;
+    color: var(--title-color);
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+/* Show Menu */
+.show-menu {
+    right: 0;
+}
+
+/* Change Header Background */
+.scroll-header {
+    background-color: var(--body-color);
+    box-shadow: 0 0 5px hsla(190, 66%, 20%, 0.17);
+}
+
+/*================================ HOME ================================*/
+
+.home--img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 86%;
+}
+
+.home--container {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    align-content: center;
+    row-gap: 4.8rem;
+}
+
+.home--data-subtitle,
+.home--data-title,
+.home--social-link,
+.home--info {
+    color: var(--white-color);
+}
+
+.home--data-subtitle {
+    display: block;
+    font-weight: var(--semi-bold-font);
+    margin-bottom: var(--mb-1);
+}
+
+.home--data-title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--medium-font);
+    margin-bottom: var(--mb-2-5);
+}
+
+.home--social {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.home--social-link {
+    font-size: 2.24rem;
+    width: max-content;
+}
+
+.home--info {
+    background-color: var(--first-color);
+
+    display: flex;
+    padding: 2.4rem 1.6rem;
+    align-items: center;
+    column-gap: 0.8rem;
+    position: absolute;
+    right: 0;
+    bottom: 1.6rem;
+    width: 238px;
+}
+
+.home--info-title {
+    display: block;
+    font-size: var(--small-font-size);
+    font-weight: var(--semi-bold-font);
+    margin-bottom: var(--mb-0-75);
+}
+
+.home--info-button {
+    font-size: var(--smallest-font-size);
+}
+
+.home--info-overlay {
+    overflow: hidden;
+}
+
+.home--info-img {
+    width: 145px;
+    transition: 0.3s;
+}
+
+.home--info-img:hover {
+    transform: scale(1.2);
+}
+
+/*================================ BUTTONS ================================*/
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: 1.6rem 3.2rem;
+    font-weight: var(--semi-bold-font);
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.button--flex {
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+}
+
+.button--link {
+    background: none;
+    padding: 0;
+}
+
+.button--link:hover {
+    background: none;
+}
