@@ -174,7 +174,7 @@ button {
 .section--title {
     font-size: var(--h2-font-size);
     color: var(--title-color);
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: center;
     margin-bottom: var(--mb-2);
 }
@@ -240,7 +240,7 @@ button {
         height: 100%;
         box-shadow: -2px 0 5px hsla(190, 66%, 20%, 0.17);
         padding: 4.8rem;
-        transition: 0.4s;
+        transition: 0.3s;
     }
 }
 
@@ -278,6 +278,11 @@ button {
 .scroll-header {
     background-color: var(--body-color);
     box-shadow: 0 0 5px hsla(190, 66%, 20%, 0.17);
+}
+
+.scroll-header .nav--logo,
+.scroll-header .nav--toggle {
+    color: var(--title-color);
 }
 
 /*================================ HOME ================================*/
@@ -394,4 +399,172 @@ button {
 
 .button--link:hover {
     background: none;
+}
+
+/*================================ ABOUT ================================*/
+
+.about--container {
+    row-gap: 4rem;
+}
+
+.about--data {
+    text-align: center;
+}
+
+.about--description {
+    margin-bottom: var(--mb-2);
+}
+
+.about--img {
+    display: flex;
+    column-gap: 1.6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.about--img-overlay {
+    overflow: hidden;
+}
+
+.about--img-one,
+.about--img-two {
+    transition: 0.3s;
+}
+
+.about--img-one:hover,
+.about--img-two:hover {
+    transform: scale(1.2);
+}
+
+.about--img-one {
+    width: 134px;
+}
+
+.about--img-two {
+    width: 184px;
+}
+
+/*================================ DISCOVER ================================*/
+
+.discover--card {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+}
+
+.discover--data {
+    position: absolute;
+    left: 1.6rem;
+    bottom: 2.4rem;
+}
+
+.discover--title,
+.discover--description {
+    color: var(--white-color);
+}
+
+.discover--title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.discover--description {
+    display: block;
+    font-size: var(--smallest-font-size);
+}
+
+.discover--img {
+    transition: 0.3s;
+}
+
+.discover--img:hover {
+    transform: scale(1.2);
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+/*================================ EXPERIENCE ================================*/
+
+.experience--container {
+    row-gap: 4rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.experience--content {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.6rem;
+    justify-items: center;
+    padding: 0 3.2rem;
+}
+
+.experience--number {
+    font-size: var(--h2-font-size);
+    font-weight: var(--semi-bold-font);
+    margin-bottom: var(--mb-0-75);
+}
+
+.experience--description {
+    font-size: var(--small-font-size);
+}
+
+.experience--img {
+    position: relative;
+    padding-bottom: 3.2rem;
+}
+
+.experience--img-overlay:nth-child(1) {
+    width: 265px;
+    margin-right: 3.2rem;
+}
+
+.experience--img-overlay:nth-child(2) {
+    width: 120px;
+
+    position: absolute;
+    top: 3.2rem;
+    right: 0;
+}
+
+.experience--img-one,
+.experience--img-two {
+    transition: 0.3s;
+}
+
+.experience--img-one:hover,
+.experience--img-two:hover {
+    transform: scale(1.2);
+}
+
+.experience--img-overlay {
+    overflow: hidden;
+}
+
+/*================================ VIDEO ================================*/
+
+.video--container {
+    padding-top: 1.6rem;
+}
+
+.video--description {
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.video--content {
+    position: relative;
+}
+
+.video--button {
+    position: absolute;
+    right: 1.6rem;
+    transform: translate(0, -64%);
+    padding: 1.6rem 2.4rem;
+}
+
+.video--icon {
+    font-size: 1.92rem;
 }
