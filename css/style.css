@@ -49,7 +49,7 @@ html {
     --first-color: hsl(190, 68%, 24%);
     --first-color-alt: hsl(190, 68%, 16%);
     --title-color: hsl(190, 66%, 20%);
-    --text-color: hsl(190, 24%, 38%);
+    --text-color: hsl(190, 66%, 25%);
     --text-color-light: hsl(190, 8%, 60%);
     --input-color: hsl(190, 20%, 94%);
     --body-color: hsl(190, 100%, 99%);
@@ -567,4 +567,135 @@ button {
 
 .video--icon {
     font-size: 1.92rem;
+}
+
+/*================================ PLACES ================================*/
+
+.place--card {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+}
+
+.place--content,
+.place--title {
+    color: var(--white-color);
+}
+
+.place--content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 1.2rem 1.2rem 1.6rem;
+}
+
+.place--rating {
+    display: flex;
+    align-items: center;
+    column-gap: 0.6rem;
+    margin-left: 75%;
+}
+
+.place--rating-icon {
+    font-size: 1.2rem;
+}
+
+.place--rating-number {
+    font-size: var(--small-font-size);
+}
+
+.place--data {
+    display: flex;
+    flex-direction: column;
+}
+
+.place--subtitle,
+.place--price {
+    display: block;
+}
+
+.place--title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.place--subtitle {
+    font-size: var(--smallest-font-size);
+    margin-bottom: var(--mb-1-25);
+}
+
+.place--button {
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+    padding: 1.2rem 1.8rem;
+}
+
+.place--img {
+    transition: 0.3s;
+}
+
+.place--card:hover > .place--img {
+    transform: scale(1.2);
+}
+
+/*================================ SUBSCRIBE ================================*/
+
+.subscribe--bg {
+    background-color: var(--first-color);
+    padding: 4rem 0;
+}
+
+.subscribe--title,
+.subscribe--description {
+    color: var(--white-color);
+}
+
+.subscribe--description {
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.subscribe--form {
+    background-color: var(--input-color);
+    padding: 0.8rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe--input {
+    width: 100%;
+    padding-right: 0.8rem;
+    background-color: var(--input-color);
+    color: var(--text-color);
+}
+
+.subscribe--input::placeholder {
+    color: var(--text-color);
+}
+
+/*================================ SPONSORS ================================*/
+
+.sponsor--container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: center;
+    row-gap: 5.6rem;
+}
+
+.sponsor--img {
+    width: 90px;
+    filter: invert(0.8);
+    transition: 0.3s;
+}
+
+.sponsor--content:hover > .sponsor--img {
+    filter: invert(0.4);
 }
