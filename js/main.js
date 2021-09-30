@@ -48,3 +48,60 @@ const scrollHeader = () => {
 };
 
 window.addEventListener('scroll', scrollHeader);
+
+/*=============================== SWIPER DISCOVER ================================*/
+
+var swiper = new Swiper('.discover--container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 32,
+    coverflowEffect: {
+        rotate: 0,
+    },
+});
+
+/*==================================== VIDEO =====================================*/
+
+const videoFile = document.getElementById('video-file');
+const videoButton = document.getElementById('video-button');
+const videoIcon = document.getElementById('video-icon');
+
+// play and pause functionality
+const playPause = () => {
+    if (videoFile.paused) {
+        videoFile.play();
+        videoIcon.classList.add('ri-pause-line');
+        videoIcon.classList.remove('ri-play-line');
+    } else {
+        videoFile.pause();
+        videoIcon.classList.add('ri-play-line');
+        videoIcon.classList.remove('ri-pause-line');
+    }
+};
+
+videoButton.addEventListener('click', playPause);
+
+// video end functionality
+const videoEnd = () => {
+    videoIcon.classList.remove('ri-pause-line');
+    videoIcon.classList.add('ri-play-line');
+};
+
+videoFile.addEventListener('ended', videoEnd);
+
+/*==================================== SWIPER PLACE =====================================*/
+
+var swiper = new Swiper('.place--container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 32,
+    coverflowEffect: {
+        rotate: 0,
+    },
+});
