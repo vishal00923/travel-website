@@ -104,6 +104,44 @@ html {
     }
 }
 
+/*================ Variables Dark Theme ===================*/
+
+body.dark-theme {
+    --first-color: hsl(190, 68%, 24%);
+    --title-color: hsl(190, 26%, 95%);
+    --text-color: hsl(190, 8%, 75%);
+    --input-color: hsl(190, 29%, 16%);
+    --body-color: hsl(190, 29%, 12%);
+    --scroll-bar-color: hsl(190, 12%, 48%);
+    --scroll-thumb-color: hsl(190, 12%, 36%);
+}
+
+/*================ Button Light/Dark Theme ================*/
+
+.nav--dark {
+    display: flex;
+    align-items: center;
+    column-gap: 3.2rem;
+
+    position: absolute;
+    left: 4.8rem;
+    bottom: 6.4rem;
+}
+
+.change-theme-icon,
+.change-theme-name {
+    color: var(--text-color);
+}
+
+.change-theme-icon {
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.change-theme-name {
+    font-size: var(--small-font-size);
+}
+
 /*================ BASE =================================*/
 
 * {
@@ -283,6 +321,22 @@ button {
 .scroll-header .nav--logo,
 .scroll-header .nav--toggle {
     color: var(--title-color);
+}
+
+/* Active Link */
+.active-link {
+    position: relative;
+    color: var(--title-color);
+}
+
+.active-link::before {
+    content: '';
+    position: absolute;
+    bottom: -1.2rem;
+    left: 0;
+    background-color: var(--title-color);
+    width: 100%;
+    height: 2px;
 }
 
 /*================================ HOME ================================*/
@@ -481,6 +535,7 @@ button {
     transform: scale(1.2);
 }
 
+/* Remove background images */
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
     background-image: none;
@@ -698,4 +753,123 @@ button {
 
 .sponsor--content:hover > .sponsor--img {
     filter: invert(0.4);
+}
+
+/*================================ FOOTER ================================*/
+
+.footer--container {
+    row-gap: 8rem;
+}
+
+.footer--content {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    row-gap: 3.2rem;
+}
+
+.footer--title,
+.footer--subtitle {
+    font-size: var(--h3-font-size);
+}
+
+.footer--title {
+    margin-bottom: var(--mb-0-5);
+}
+
+.footer--description {
+    margin-bottom: var(--mb-2-5);
+}
+
+.footer--social {
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.footer--social-container {
+    display: flex;
+    column-gap: 3.2rem;
+}
+
+.footer--subtitle {
+    margin-bottom: var(--mb-1);
+}
+
+.footer--item {
+    margin-bottom: var(--mb-0-75);
+}
+
+.footer--link {
+    color: var(--text-color);
+}
+
+.footer--link:hover {
+    color: var(--title-color);
+}
+
+.footer--rights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.4rem;
+}
+
+.footer--copy,
+.footer--terms-link {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.footer--terms {
+    display: flex;
+    justify-content: center;
+    column-gap: 2.4rem;
+}
+
+.footer--terms-link:hover {
+    color: var(--text-color);
+}
+
+/*================================ SCROLL UP ================================*/
+
+.scrollup {
+    position: fixed;
+    right: 1.6rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    padding: 0.8rem;
+    opacity: 0.9;
+    z-index: var(--z-tooltip);
+    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+}
+
+.scrollup--icon {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.scrollup:hover {
+    background-color: var(--first-color-alt);
+    opacity: 1;
+}
+
+/* Show Scroll Buttton */
+.scrollup--show {
+    bottom: 8rem;
+}
+
+/*================================ CUSTOM SCROLL BAR ================================*/
+
+::-webkit-scrollbar {
+    width: 0.96rem;
+    background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color-light);
 }
