@@ -105,3 +105,72 @@ var swiper = new Swiper('.place--container', {
         rotate: 0,
     },
 });
+
+/*====================================  SHOW SCROLL UP =====================================*/
+
+const scrollUp = document.getElementById('scrollup');
+
+window.addEventListener('scroll', () => {
+    if (this.scrollY >= 200) {
+        scrollUp.classList.add('scrollup--show');
+    } else {
+        scrollUp.classList.remove('scrollup--show');
+    }
+});
+
+/*============================== SCROLL SECTIONS ACTIVE LINK =================================*/
+
+const sections = document.querySelectorAll('section[id]');
+
+const activeSectionScroll = () => {
+    const verticalScroll = window.scrollY;
+
+    sections.forEach((section) => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 50;
+        const sectionId = section.getAttribute('id');
+
+        if (verticalScroll > sectionTop && verticalScroll <= sectionTop + sectionHeight) {
+            document.querySelector('.nav--menu a[href*=' + sectionId + ']').classList.add('active-link');
+        } else {
+            document.querySelector('.nav--menu a[href*=' + sectionId + ']').classList.remove('active-link');
+        }
+    });
+};
+
+window.addEventListener('scroll', activeSectionScroll);
+
+/*============================== DARK/LIGHT THEME =================================*/
+
+const themeBtn = document.getElementById('theme-btn');
+const darkTheme = 'dark-theme';
+const iconTheme = 'ri-sun-line';
+
+// Previously selected theme (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+// console.log(selectedTheme);
+// console.log(selectedIcon);
+
+// We get the current theme that the interface has by validating the theme-dark class
+const getCurrentTheme = () => (document.body.classList.contains(darkTheme) ? 'dark' : 'light');
+const getCurrentIcon = () => (themeBtn.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line');
+
+// We validate if the user previously chooses a theme
+if (selectedTheme) {
+    // If the validation is fulfilled, the task was to know if we activated or deactivated the dark
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeBtn.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
+}
+
+// Activate / Deactivate the theme manually with the button
+themeBtn.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme);
+    themeBtn.classList.toggle(iconTheme);
+
+    // We save the theme and the current icon that the user choose
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+});
