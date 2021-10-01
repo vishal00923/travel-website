@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!------------------------------ FAVICON -------------------------------->
+        <link rel="shortcut icon" href="img/favicon.png" />
 
         <!------------------------------ REMIX ICONS -------------------------------->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
@@ -29,15 +30,21 @@
                             <a href="#home" class="nav--link active-link">Home</a>
                         </li>
                         <li class="nav--item">
-                            <a href="#About" class="nav--link">About</a>
+                            <a href="#about" class="nav--link">About</a>
                         </li>
                         <li class="nav--item">
-                            <a href="#Discover" class="nav--link">Discover</a>
+                            <a href="#discover" class="nav--link">Discover</a>
                         </li>
                         <li class="nav--item">
-                            <a href="#Place" class="nav--link">place</a>
+                            <a href="#place" class="nav--link">place</a>
                         </li>
                     </ul>
+
+                    <!-- Theme Change Button -->
+                    <div class="nav--dark">
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme-icon" id="theme-btn"></i>
+                    </div>
 
                     <i class="ri-close-line nav--close" id="nav-close"></i>
                 </div>
@@ -168,7 +175,7 @@
             </section>
 
             <!------------------------------ EXPERIENCE -------------------------------->
-            <section class="experience section" id="experience">
+            <section class="experience section">
                 <h2 class="section--title">
                     With Our Experience <br />
                     We Will Serve You
@@ -214,7 +221,7 @@
             </section>
 
             <!------------------------------ VIDEO -------------------------------->
-            <section class="video section" id="video">
+            <section class="video section">
                 <h2 class="section--title">Video Tour</h2>
 
                 <div class="video--container container">
@@ -362,7 +369,7 @@
             </section>
 
             <!------------------------------ SUBSCRIBE -------------------------------->
-            <section class="subscribe section" id="subscribe">
+            <section class="subscribe section">
                 <div class="subscribe--bg">
                     <div class="subscribe--container container">
                         <h2 class="section--title subscribe--title">
@@ -381,7 +388,7 @@
             </section>
 
             <!------------------------------ SPONSORS -------------------------------->
-            <section class="sponsor section" id="sponsor">
+            <section class="sponsor section">
                 <div class="sponsor--container container grid">
                     <div class="sponsor--content">
                         <img src="img/sponsors1.png" alt="Sponsor 1" class="sponsor--img" />
@@ -402,7 +409,107 @@
             </section>
         </main>
 
-        <!------------------------------ SCROLL -------------------------------->
+        <!------------------------------ FOOTER -------------------------------->
+        <footer class="footer section">
+            <div class="footer--container container grid">
+                <div class="footer--content grid">
+                    <div class="footer--data">
+                        <h3 class="footer--title">Travel</h3>
+                        <p class="footer--description">
+                            Travel you choose the <br />
+                            destination, we offer you the <br />
+                            experience.
+                        </p>
+
+                        <div class="footer--social-container">
+                            <a href="https://www.facebook.com/" target="_blank" class="footer--social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+
+                            <a href="https://www.twitter.com/" target="_blank" class="footer--social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/" target="_blank" class="footer--social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/" target="_blank" class="footer--social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer--data">
+                        <h3 class="footer--subtitle">About</h3>
+
+                        <ul>
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">About Us</a>
+                            </li>
+
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">Features</a>
+                            </li>
+
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">News &amp; Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer--data">
+                        <h3 class="footer--subtitle">Company</h3>
+
+                        <ul>
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">Team</a>
+                            </li>
+
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">Plan &amp; Pricing</a>
+                            </li>
+
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">Become a member</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer--data">
+                        <h3 class="footer--subtitle">Support</h3>
+
+                        <ul>
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">FAQs</a>
+                            </li>
+
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">Support Center</a>
+                            </li>
+
+                            <li class="footer--item">
+                                <a href="#" class="footer--link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer--rights">
+                    <p class="footer--copy">&copy; 2021 Travelers. All rigths reserved.</p>
+
+                    <div class="footer--terms">
+                        <a href="#" class="footer--terms-link">Terms &amp; Agreements</a>
+                        <a href="" class="footer--terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!------------------------------ SCROLL UP -------------------------------->
+        <a href="#" class="scrollup" id="scrollup">
+            <i class="ri-arrow-up-line scrollup--icon"></i>
+        </a>
 
         <!------------------------------ SWIPER JS -------------------------------->
         <script src="js/swiper-bundle.min.js"></script>
