@@ -762,7 +762,7 @@ button {
 }
 
 .footer--content {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     row-gap: 3.2rem;
 }
 
@@ -782,6 +782,7 @@ button {
 .footer--social {
     font-size: 2rem;
     color: var(--title-color);
+    margin-right: var(--mb-1-25);
 }
 
 .footer--social-container {
@@ -808,7 +809,7 @@ button {
 .footer--rights {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
     row-gap: 2.4rem;
 }
 
@@ -872,4 +873,286 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--text-color-light);
+}
+
+/*======================== MEDIA QUERIES ========================*/
+
+/* For Small Devices */
+@media screen and (max-width: 340px) {
+    .experience--content {
+        padding: 0;
+    }
+
+    .experience--img-overlay:nth-child(1) {
+        width: 190px;
+    }
+
+    .experience--img-overlay:nth-child(2) {
+        width: 80px;
+    }
+
+    .home--info {
+        width: 190px;
+        padding: 1.6rem;
+    }
+
+    .experience--img,
+    .video--container {
+        padding: 0;
+    }
+}
+
+/* For Medium Devices */
+@media screen and (min-width: 568px) {
+    .video--container {
+        display: grid;
+        grid-template-columns: 0.65fr;
+        justify-content: center;
+    }
+
+    .subscribe--form {
+        width: 470px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 2.4rem);
+    }
+
+    .nav--link {
+        color: var(--white-color);
+        text-transform: initial;
+    }
+
+    .nav--link:hover {
+        color: var(--white-color);
+    }
+
+    .nav--dark {
+        position: initial;
+    }
+
+    .nav--menu {
+        display: flex;
+        column-gap: 1.6rem;
+    }
+
+    .nav--list {
+        flex-direction: row;
+        column-gap: 6.4rem;
+    }
+
+    .nav--toggle,
+    .nav--close,
+    .change-theme-name {
+        display: none;
+    }
+
+    .change-theme-icon {
+        color: var(--white-color);
+    }
+
+    .active-link::before {
+        background-color: var(--white-color);
+    }
+
+    .scroll-header .nav--link {
+        color: var(--text-color);
+    }
+
+    .scroll-header .active-link {
+        color: var(--title-color);
+    }
+
+    .scroll-header .active-link::before {
+        background-color: var(--title-color);
+    }
+
+    .scroll-header .change-theme-icon {
+        color: var(--title-color);
+    }
+
+    .section {
+        padding: 11.2rem 0 3.2rem;
+    }
+
+    .home--container {
+        height: 100vh;
+        grid-template-rows: 1.8fr 0.5fr;
+    }
+
+    .home--data {
+        align-self: flex-end;
+    }
+
+    .home--social {
+        flex-direction: row;
+        align-items: flex-end;
+        margin-bottom: 4.8rem;
+        column-gap: 4rem;
+    }
+
+    .home--info {
+        bottom: 4.8rem;
+    }
+
+    .about--container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .about--data,
+    .about--title {
+        text-align: initial;
+    }
+
+    .about--title {
+        margin-bottom: var(--mb-1-5);
+    }
+
+    .about--description {
+        margin-bottom: var(--mb-2);
+    }
+
+    .discover--container,
+    .place--container {
+        width: 610px;
+        margin: 0 auto;
+    }
+
+    .discover--container,
+    .place--container {
+        padding-top: 3.2rem;
+    }
+
+    .experience--img-overlay:nth-child(1) {
+        width: 364px;
+        margin-right: 6.4rem;
+    }
+
+    .experience--img-overlay:nth-child(2) {
+        width: 160px;
+    }
+
+    .subscribe--bg {
+        background: none;
+        padding: 0;
+    }
+
+    .subscribe--container {
+        background-color: var(--first-color);
+        padding: 5.6rem 0;
+    }
+
+    .subscribe--input {
+        padding: 0 0.8rem;
+    }
+
+    .footer--rights {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+    .container {
+        margin: 0 auto;
+    }
+
+    .home--container {
+        grid-template-rows: 2fr 0.5fr;
+    }
+
+    .home--info {
+        width: 328px;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 3.2rem;
+    }
+
+    .home--info-title {
+        font-size: var(--normal-font-size);
+    }
+
+    .home--info-img {
+        width: 240px;
+    }
+
+    .about--img-one {
+        width: 230px;
+    }
+
+    .about--img-two {
+        width: 290px;
+    }
+
+    .discover--card {
+        width: 237px;
+    }
+
+    .discover--container,
+    .place--container {
+        width: 700px;
+    }
+
+    .discover--data,
+    .place--data {
+        left: 2.4rem;
+        bottom: 3.2rem;
+    }
+
+    .discover--title {
+        font-size: var(--h2-font-size);
+    }
+
+    .experience--content {
+        margin: var(--mb-1) 0;
+        column-gap: 5.6rem;
+    }
+
+    .experience--img-overlay:nth-child(1) {
+        width: 463px;
+        margin-right: 11.2rem;
+    }
+
+    .experience--img-overlay:nth-child(2) {
+        width: 220px;
+        top: 4.8rem;
+    }
+
+    .video--container {
+        grid-template-columns: 0.7fr;
+    }
+
+    .video--description {
+        padding: 0 12.8rem;
+    }
+
+    .footer--content {
+        justify-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+/* For Tall Screens on Mobiles & Desktop*/
+@media screen and (min-height: 721px) {
+    body {
+        margin: 0;
+    }
+
+    .home--container,
+    .home--img {
+        height: 640px;
+    }
 }
