@@ -1,13 +1,13 @@
 # Created Using
 
--   ### `html`
--   ### `css`
--   ### `javascript`
--   ### `swiper.js`
+- ### `html`
+- ### `css`
+- ### `javascript`
+- ### `swiper.js`
 
 ## Responsive Travel Website
 
-<img src="website-preview.png" width="60%" height="60%" />
+<img src="https://i.ibb.co/s5TKGQ2/Screenshot-2023-01-05-224212.png" alt="Preview" border="0">
 
 ## Try It
 
